@@ -1,0 +1,56 @@
+\documentclass[10pt,a4paper]{moderncv}
+
+\moderncvtheme[blue, modroman]{classic}                
+\usepackage{fourier}
+\linespread{1.05}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.8]{geometry}
+\AtBeginDocument{\recomputelengths}  
+\setlength{\topmargin}{-0.7in}
+\usepackage{calc}
+\setlength{\textheight}{\textheight+0.5in}
+\usepackage{layout}
+
+\usepackage{paralist}
+\firstname{Shraddha}
+\familyname{Barke}
+\address{Computer Science Department\\
+University of California, San Diego\\}    
+\email{sbarke [at] eng.ucsd.edu}                     
+\extrainfo{\footnotesize \url{shraddhabarke.github.io}}
+
+\begin{document}
+\maketitle
+
+\input{research_interests}
+\input{education}
+\input{publications}
+\input{employment}
+\input{speaking}
+\input{teaching}
+\input{mentoring}
+\input{service}
+\input{honors}
+\input{summerschools}
+\input{patents}
+
+\renewcommand{\listitemsymbol}{-}
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~#6\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+\end{document}
